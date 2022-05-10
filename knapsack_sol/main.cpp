@@ -302,7 +302,7 @@ int main() {
             data<<line<<"         ";
             data<<my_res<<"         ";
             
-            long double dev = abs((my_res - res)/res * 100);
+            float dev = (my_res - res)/res * 100;
             cout<<(my_res - res)/res*1.0<<endl;
             data<<dev;
             data <<"\n";
