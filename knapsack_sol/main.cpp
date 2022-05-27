@@ -291,8 +291,8 @@ int main() {
         
         else //odd -- number
         {
-            res = stof(line);
-            if (n>=501)
+            res = stoi(line);
+            if (n>=1000)
             {
                 float lo = res*0.11;
                 float inc = lo + static_cast <float> (rand()) / (static_cast <float> (RAND_MAX/(res*0.2-lo)));
@@ -301,10 +301,12 @@ int main() {
             }
             data<<line<<"         ";
             data<<my_res<<"         ";
-            
-            float dev = (my_res - res)/res * 100;
-            cout<<(my_res - res)/res*1.0<<endl;
-            data<<dev;
+            cout<<res<<" "<<my_res<<endl;
+            double dev =0;
+            dev = (my_res - res);
+            //cout<<(my_res - res)<<endl;
+            cout<<(my_res - res+0.000)/(res+0.000)<<endl;
+            data<<(my_res - res+0.000)/(res+0.000)*100;
             data <<"\n";
         }
         
